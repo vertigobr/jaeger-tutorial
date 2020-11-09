@@ -1,0 +1,48 @@
+cassandra:
+  config:
+    max_heap_size: 1024M
+    heap_new_size: 256M
+    cluster_size: 1
+  persistence:
+    enabled: true
+    size: 1Gi
+  resources:
+    requests:
+      memory: 2048Mi
+      cpu: 0.4
+    limits:
+      memory: 2048Mi
+      cpu: 1.0
+schema:
+  serviceAccount:
+    name: jaeger-generic-sa
+    create: true
+query:
+  ingress:
+    enabled: false
+  service:
+    annotations:
+      dev.okteto.com/auto-ingress: "true"
+  serviceAccount:
+    name: jaeger-generic-sa
+    create: false
+  resources:
+    limits:
+      memory: 256Mi
+      cpu: 200m
+collector:
+  serviceAccount:
+    name: jaeger-generic-sa
+    create: false
+  resources:
+    limits:
+      memory: 256Mi
+      cpu: 200m
+agent:
+  serviceAccount:
+    name: jaeger-generic-sa
+    create: false
+  resources:
+    limits:
+      memory: 256Mi
+      cpu: 200m
