@@ -23,7 +23,15 @@ In a terminal terminal user Okteto to switche the app container:
 
 ```
 okteto up
-mvn package
 mvn spring-boot:run
 ```
 
+## Test services
+
+```
+# local tunneled port
+curl -s http://localhost:9000/greeting?name=friend | jq
+curl -s http://localhost:9000/hail | jq
+# okteto public endpoint
+curl -s https://jaeger-tutorial-NAMESPACE.cloud.okteto.net/greeting?name=nurse | jq
+```
