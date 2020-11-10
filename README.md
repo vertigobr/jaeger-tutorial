@@ -19,10 +19,11 @@ okteto stack deploy --build
 
 ## Development with Okteto
 
-In first terminal:
+In a terminal terminal user Okteto to switche the app container:
 
 ```
 okteto up
+mvn package
 mvn spring-boot:run
 ```
 
