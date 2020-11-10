@@ -17,6 +17,10 @@ schema:
   serviceAccount:
     name: jaeger-generic-sa
     create: true
+  resources:
+    limits:
+      memory: 128Mi
+      cpu: 100m
 query:
   ingress:
     enabled: false

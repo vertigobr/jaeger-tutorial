@@ -1,0 +1,17 @@
+name: jaeger-tutorial
+labels:
+  app.kubernetes.io/component: jaeger-tutorial
+image: maven:3-jdk-11
+workdir: /usr/src/app
+command: bash
+volumes:
+- /home/gradle/.gradle
+sync:
+- .:/usr/src/app
+forward:
+- 5005:5005
+- 9000:9000
+resources:
+  limits:
+    cpu: "1"
+    memory: 1Gi

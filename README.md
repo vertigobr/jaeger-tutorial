@@ -19,4 +19,10 @@ okteto stack deploy --build
 
 ## Development with Okteto
 
+In first terminal:
+
+```
+okteto up
+mvn spring-boot:run
+```
 

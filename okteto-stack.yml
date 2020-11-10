@@ -11,8 +11,8 @@ services:
     ports:
       - 9000
     resources:
-      cpu: 400m
-      memory: 512Mi
+      cpu: 200m
+      memory: 256Mi
 
   # jaeger-query:
   #   public: true
