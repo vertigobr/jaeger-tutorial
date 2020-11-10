@@ -28,6 +28,14 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<!--
+			Jaeger Web Starter
+		-->
+		<dependency>
+			<groupId>io.opentracing.contrib</groupId>
+			<artifactId>opentracing-spring-jaeger-web-starter</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+		<!--
 			Thin JARs are better for Docker images
 		-->
         <dependency>
